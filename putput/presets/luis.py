@@ -34,9 +34,9 @@ def preset(*,
         >>> for luis_result in p.flow(disable_progress_bar=True):
         ...     print(json.dumps(luis_result, sort_keys=True))
         ...     break
-        {"entities": [{"endPos": 17, "entity": "ITEM", "startPos": 12},
-                      {"endPos": 35, "entity": "ITEM", "startPos": 30},
-                      {"endPos": 45, "entity": "ITEM", "startPos": 40}],
+        {"entities": [{"endPos": 16, "entity": "ITEM", "startPos": 12},
+                      {"endPos": 34, "entity": "ITEM", "startPos": 30},
+                      {"endPos": 44, "entity": "ITEM", "startPos": 40}],
          "intent": "ADD_INTENT",
          "text": "can she get fries can she get fries and fries"}
 
@@ -95,7 +95,7 @@ def _convert_to_luis_entities(utterance: str,
         label = _token_extractor(handled_item)
         phrase = ' '.join(re.findall(r'\(([^()]+)\)', handled_item))
         start = offset + utterance[offset:].index(phrase)
-        end = start + len(phrase)
+        end = start + len(phrase) - 1
         if label in entities:
             ent = {
                 'entity': label,

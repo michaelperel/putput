@@ -957,16 +957,16 @@ class TestPipeline(unittest.TestCase):
             {'text': 'hi', 'intent': 'None', 'entities': []},
             {'text': 'hi he will want to play',
              'intent': 'None',
-             'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 23}]},
+             'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 22}]},
             {'text': 'hi he will want to listen',
              'intent': 'None',
-             'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 25}]},
+             'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 24}]},
             {'text': 'hi she will want to play',
              'intent': 'None',
-             'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 24}]},
+             'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 23}]},
             {'text': 'hi she will want to listen',
              'intent': 'None',
-             'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 26}]}]
+             'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 25}]}]
         pairs = [(luis_tests, expected_luis_tests)]
         compare_all_pairs(self, pairs)
 
@@ -981,22 +981,22 @@ class TestPipeline(unittest.TestCase):
             {
                 'text': 'hi he will want to play',
                 'intent': 'PLAY_INTENT',
-                'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 23}]
+                'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 22}]
             },
             {
                 'text': 'hi he will want to listen',
                 'intent': 'PLAY_INTENT',
-                'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 25}]
+                'entities': [{'entity': 'PLAY', 'startPos': 16, 'endPos': 24}]
             },
             {
                 'text': 'hi she will want to play',
                 'intent': 'PLAY_INTENT',
-                'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 24}]
+                'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 23}]
             },
             {
                 'text': 'hi she will want to listen',
                 'intent': 'PLAY_INTENT',
-                'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 26}]
+                'entities': [{'entity': 'PLAY', 'startPos': 17, 'endPos': 25}]
             }
         ]
         pairs = [(luis_tests, expected_luis_tests)]
@@ -1020,27 +1020,27 @@ class TestPipeline(unittest.TestCase):
         expected_luis_tests = [
             {'text': 'hi',
              'intent': 'None',
-             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 2}]},
+             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 1}]},
             {'text': 'hi he will want to play',
              'intent': 'None',
-             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 2},
-                          {'entity': 'START', 'startPos': 3, 'endPos': 15},
-                          {'entity': 'PLAY', 'startPos': 16, 'endPos': 23}]},
+             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 1},
+                          {'entity': 'START', 'startPos': 3, 'endPos': 14},
+                          {'entity': 'PLAY', 'startPos': 16, 'endPos': 22}]},
             {'text': 'hi he will want to listen',
              'intent': 'None',
-             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 2},
-                          {'entity': 'START', 'startPos': 3, 'endPos': 15},
-                          {'entity': 'PLAY', 'startPos': 16, 'endPos': 25}]},
+             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 1},
+                          {'entity': 'START', 'startPos': 3, 'endPos': 14},
+                          {'entity': 'PLAY', 'startPos': 16, 'endPos': 24}]},
             {'text': 'hi she will want to play',
              'intent': 'None',
-             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 2},
-                          {'entity': 'START', 'startPos': 3, 'endPos': 16},
-                          {'entity': 'PLAY', 'startPos': 17, 'endPos': 24}]},
+             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos': 1},
+                          {'entity': 'START', 'startPos': 3, 'endPos': 15},
+                          {'entity': 'PLAY', 'startPos': 17, 'endPos': 23}]},
             {'text': 'hi she will want to listen',
              'intent': 'None',
-             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos':2},
-                          {'entity': 'START', 'startPos': 3, 'endPos': 16},
-                          {'entity': 'PLAY', 'startPos': 17, 'endPos': 26}]}]
+             'entities': [{'entity': 'WAKE', 'startPos': 0, 'endPos':1},
+                          {'entity': 'START', 'startPos': 3, 'endPos': 15},
+                          {'entity': 'PLAY', 'startPos': 17, 'endPos': 25}]}]
         pairs = [(luis_tests, expected_luis_tests)]
         compare_all_pairs(self, pairs)
 
